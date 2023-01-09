@@ -1,0 +1,19 @@
+.full-width{
+  width: 25%;
+  position: relative;
+  left: 37.9%;
+
+}
+
+.full-width1{
+  width: 25%;
+  position: relative;
+  left: 12.9%;
+  top: 80%;
+}
+
+.btn1{
+  left: 46.5%;
+  position:absolute;
+  top: 55%;
+}

@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+
+  <span class="example-spacer"></span>
+
+</mat-toolbar>
+
+<div class="bootstrap-wrapper">
+  <div class="container mt">
+    <div class="row">
+      <div class="col-md-6 offset-md-3"></div>
+
+        <div class="container text-center">
+          <img class="ing-fluid" style="width: 100px;" src="/assets/password.png" alt="">
+        </div>
+
+        <h1 class="text-center">Pagina del Login</h1>
+
+<form appearence="outline">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Usuario</mat-label>
+            <input type="text" [(ngModel)]="usuarioId" required="required" name="usuarioId" matInput autocomplete="off"/>
+          </mat-form-field>
+
+          <mat-form-field class="full-width1" appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" [(ngModel)]="password" required="required" name="password" matInput autocomplete="off"/>
+          </mat-form-field>
+
+          <div class="container text-center mt">
+            <button type="submit" (click)="login()" mat-raised-button color="primary" class="btn1">Ingresar</button>
+          </div>
+
+</form>
+
+        </div>
+    </div>
+  </div>
+
