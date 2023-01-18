@@ -1,10 +1,8 @@
-
 import { Component, OnInit, resolveForwardRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginuserService } from '../loginuser.service';
 import { interval } from 'rxjs';
 import { User } from '../user';
-
 
 @Component({
   selector: 'app-login',
@@ -13,38 +11,37 @@ import { User } from '../user';
 })
 export class LoginComponent implements OnInit {
 
-  r: boolean | undefined;
-
-  usuarioId: any;
-  password: any;
-
-
-
+  model: any = {
+    usuarioId: null,
+    password: null
+  };
 
   constructor(private loginuserservice: LoginuserService, private router: Router) { }
 
   login() {
-    var user = this.usuarioId;
-    var pass = this.password;
+    var user = this.model.usuarioId;
+    var pass = this.model.password;
 
-    this.loginuserservice.login(user,pass).subscribe((data:boolean) => {
-      this.r = data;
+    this.loginuserservice.login(user, pass).subscribe(data => {
 
-      if (this.r == true) {
+      if (user == null && pass == null) {
+        alert("Datos incompletos")
+      } else if (data) {
+        localStorage.setItem('usuario', JSON.stringify(this.model.usuarioId, this.model.password));
+        console.log('usuarioId', 'password');
+
         this.router.navigate(["/dashboard"])
-      } else{
+      } else {
         alert("Usuario o Contraseña invalidos")
       }
-
-
     });
   }
 
+  user(user: any): string {
+    throw new Error('Method not implemented.');
+  }
 
   ngOnInit(): void {
   }
-
-
-
 }
 

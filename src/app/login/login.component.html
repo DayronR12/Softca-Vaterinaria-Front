@@ -1,38 +1,49 @@
 <mat-toolbar color="primary">
 
   <span class="example-spacer"></span>
+  <h1>Bienvenido | Pagina Login</h1>
 
 </mat-toolbar>
+<div class="body">
+  <div class="bootstrap-wrapper" layout="row" layout-align="center center">
 
-<div class="bootstrap-wrapper">
-  <div class="container mt">
-    <div class="row">
-      <div class="col-md-6 offset-md-3"></div>
+    <body class="mat-typographyy" style="background-color: #3F51B5;">
 
-        <div class="container text-center">
-          <img class="ing-fluid" style="width: 100px;" src="/assets/password.png" alt="">
-        </div>
+      <div class="row">
 
-        <h1 class="text-center">Pagina del Login</h1>
+        <form appearence="outline">
 
-<form appearence="outline">
-          <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Usuario</mat-label>
-            <input type="text" [(ngModel)]="usuarioId" required="required" name="usuarioId" matInput autocomplete="off"/>
-          </mat-form-field>
+          <mat-drawer-container class="example-container">
+            <mat-drawer mode="side" opened>
 
-          <mat-form-field class="full-width1" appearance="outline">
-            <mat-label>Contraseña</mat-label>
-            <input type="password" [(ngModel)]="password" required="required" name="password" matInput autocomplete="off"/>
-          </mat-form-field>
+              <mat-form-field class="full-width" appearance="fill">
+                <mat-label for="usuarioId">Usuario</mat-label>
+                <input type="text" [(ngModel)]="model.usuarioId" required="required" name="usuarioId" matInput
+                  autocomplete="off" />
+              </mat-form-field>
 
-          <div class="container text-center mt">
-            <button type="submit" (click)="login()" mat-raised-button color="primary" class="btn1">Ingresar</button>
-          </div>
+              <mat-form-field class="full-width1" appearance="fill">
+                <mat-label for="password">Contraseña</mat-label>
+                <input type="password" [(ngModel)]="model.password" required="required" name="password" matInput
+                  autocomplete="off" />
+              </mat-form-field>
 
-</form>
+              <div class="container text-center mt">
+                <button type="submit" (click)="login()" mat-raised-button color="primary" class="btn1">Ingresar</button>
+              </div>
 
-        </div>
-    </div>
-  </div>
+            </mat-drawer>
+            <mat-drawer-content>
 
+              <div class="container">
+
+                <img class="ing-fluid" style="width: 300px; position: relative; top: 5%;" src="/assets/password.png"
+                  alt="">
+              </div>
+
+            </mat-drawer-content>
+          </mat-drawer-container>
+
+        </form>
+
+      </div>

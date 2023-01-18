@@ -1,3 +1,7 @@
 .example-spacer{
   flex: 1 1 auto;
 }
+.mat-typography{
+  width: auto;
+  height: auto;
+}
