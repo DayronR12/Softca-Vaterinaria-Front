@@ -1,0 +1,79 @@
+<mat-toolbar color="primary">
+  <h1 mat-icon="">Veterinaria</h1>
+  <span class="example-spacer"></span>
+  <a mat-icon-button (click)="logout()">Logout</a>
+
+</mat-toolbar>
+
+<body class="mat-typography" style="background-color: #3F51B5;"></body>
+
+<h1 class="sth1">Tabla de Pacientes</h1>
+
+<div class="container">
+
+  <button mat-raised-button color="primary" [routerLink]="['/agregar']">Agregar Paciente</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Especie</th>
+        <th scope="col">Raza</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paciente of lista">
+        <td>{{paciente.id}}</td>
+        <td>{{paciente.nombre}}</td>
+        <td>{{paciente.especie}}</td>
+        <td>{{paciente.raza}}</td>
+        <td id="ord">
+          <button class="btn btn-danger" (click)="eliminar(paciente.id)">Eliminar</button>
+          &nbsp;
+          <button class="btn btn-warning" [routerLink]="['/editar/',paciente.id]">Modificar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<hr id="st">
+<br>
+<div class="container">
+  <h1 class="sth1">Tabla de Usuarios</h1>
+  <button mat-raised-button color="primary" [routerLink]="['/agregarusu']">Agregar Usuario</button>
+
+  <table class="table">
+    <thead color="primary">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo Identificacion</th>
+        <th scope="col">Identificacion</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Telefono</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of listau">
+        <td>{{user.id}}</td>
+        <td>{{user.nombre}}</td>
+        <td>{{user.tipo_identi}}</td>
+        <td>{{user.identificacion}}</td>
+        <td>{{user.ciudad}}</td>
+        <td>{{user.direccion}}</td>
+        <td>{{user.telefono}}</td>
+        <td id="ord">
+          <button class="btn btn-danger" (click)="eliminarU(user.id)">Eliminar</button>
+          &nbsp;
+          <button class="btn btn-warning" [routerLink]="['/editarusu/',user.id]">Modificar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<br><br><br>
+</div>

@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <h1 mat-icon="">Veterinaria</h1>
+  <span class="example-spacer"></span>
+
+
+</mat-toolbar>
+
+<div class="container">
+
+  <form action="">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="usuarioActual.nombre">
+    <br>
+    <label for="tipo_identi">Tipo Identificacion</label>
+    <input type="text" id="tipo_identi" name="tipo_identi" [(ngModel)]="usuarioActual.tipo_identi">
+    <br>
+    <label for="identificacion">Identificacion</label>
+    <input type="text" id="identificacion" name="identificacion" [(ngModel)]="usuarioActual.identificacion">
+    <br>
+    <label for="ciudad">Ciudad</label>
+    <input type="text" id="ciudad" name="ciudad" [(ngModel)]="usuarioActual.ciudad">
+    <br>
+    <label for="direccion">Direccion</label>
+    <input type="text" id="direccion" name="direccion" [(ngModel)]="usuarioActual.direccion">
+    <br>
+    <label for="telefono">Telefono</label>
+    <input type="text" id="telefono" name="telefono" [(ngModel)]="usuarioActual.telefono">
+    <br>
+<button mat-raised-button color="primary" (click)="guardarusu()">Guardar Cambios</button>
+
+  </form>
+
+
+
+
+</div>

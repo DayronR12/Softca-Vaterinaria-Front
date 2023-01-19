@@ -1,0 +1,31 @@
+.example-spacer{
+  flex: 1 1 auto;
+}
+.mat-typography{
+  width: auto;
+  height: auto;
+}
+
+#st{
+  height: 5px;
+  width: auto;
+  border: 10px solid #3F51B5;
+  background-color: #3F51B5;
+  color:#3F51B5;
+}
+
+.table{
+  box-shadow: 2px 2.5px 0px 5px #48529944;
+
+}
+
+.sth1{
+  text-align: center;
+  font-size: 25px;
+  position: relative;
+  top: 15px;
+}
+
+#ord{
+  text-align: right;
+}

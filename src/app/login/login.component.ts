@@ -1,6 +1,6 @@
 import { Component, OnInit, resolveForwardRef } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginuserService } from '../loginuser.service';
+import { LoginuserService } from '../services/loginuser.service';
 import { interval } from 'rxjs';
 import { User } from '../user';
 

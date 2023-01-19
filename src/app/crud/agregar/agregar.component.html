@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <h1 mat-icon="">Veterinaria</h1>
+  <span class="example-spacer"></span>
+
+
+</mat-toolbar>
+<body class="mat-typographyy" style="background-color: #3F51B5;">
+<div class="container">
+
+  <mat-card class="card1">
+
+    <mat-card-content>Agregando Paciente...
+      <br>
+
+  <form action="">
+
+<mat-form-field class="example-full-width">
+  <mat-label for="nombre">Nombre</mat-label>
+  <input matInput type="text" id="nombre" name="nombre" autocomplete="off" [(ngModel)]="pacienteNuevo.nombre">
+</mat-form-field>
+
+<br>
+<mat-form-field class="example-full-width">
+  <mat-label for="especie">Especie</mat-label>
+  <input matInput type="text" id="especie" name="especie" autocomplete="off" [(ngModel)]="pacienteNuevo.especie">
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+  <mat-label for="raza">Raza</mat-label>
+  <input matInput type="text" id="raza" name="raza" autocomplete="off" [(ngModel)]="pacienteNuevo.raza">
+</mat-form-field>
+<br>
+<button mat-raised-button color="primary" id="btn1" (click)="agregarPaciente()">Guardar Cambios</button>
+<button mat-raised-button color="primary" id="btn2" (click)="back()">Volver</button>
+
+  </form>
+</mat-card-content>
+  </mat-card>
+
+
+
+</div>
