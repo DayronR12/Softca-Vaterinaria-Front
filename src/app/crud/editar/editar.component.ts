@@ -9,21 +9,21 @@ import { CrudserviceService, Paciente } from 'src/app/services/crudservice.servi
 })
 export class EditarComponent implements OnInit {
 
-  id:string="";
-  pacienteActual: Paciente={id:'', nombre:'', especie:'', raza:''}
+  id: string = "";
+  pacienteActual: Paciente = { id: '', nombre: '', especie: '', raza: '' }
   constructor(private crudserv: CrudserviceService, private antivateRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.antivateRouter.snapshot.params['id'];
     this.crudserv.getUnPaciente(this.id).subscribe(
-      res=> {this.pacienteActual=res},
+      res => { this.pacienteActual = res },
       err => console.log(err)
     );
   }
 
-  guardar(){
+  guardar() {
     this.crudserv.editPaciente(this.id, this.pacienteActual).subscribe(
-      res=> {this.router.navigate(['/dashboard'])},
+      res => { this.router.navigate(['/dashboard']) },
       err => console.log(err)
     );
   }

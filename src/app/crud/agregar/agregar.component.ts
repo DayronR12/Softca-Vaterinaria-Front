@@ -9,28 +9,25 @@ import { CrudserviceService, Paciente } from 'src/app/services/crudservice.servi
 })
 export class AgregarComponent implements OnInit {
 
-  pacienteNuevo: Paciente={id:'', nombre:'', especie:'', raza:''}
+  pacienteNuevo: Paciente = { id: '', nombre: '', especie: '', raza: '' }
 
   constructor(private crudserv: CrudserviceService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  agregarPaciente(){
+  agregarPaciente() {
     this.crudserv.savePaciente(this.pacienteNuevo).subscribe(
-      res=>{
+      res => {
         console.log(res);
         this.router.navigate(['/dashboard'])
       },
-      err=>console.log(err)
+      err => console.log(err)
 
     );
   }
 
-  back(){
-        this.router.navigate(['/dashboard'])
+  back() {
+    this.router.navigate(['/dashboard'])
   }
-
-
-
 }

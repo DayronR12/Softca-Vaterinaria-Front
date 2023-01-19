@@ -1,31 +1,32 @@
-.example-spacer{
+.example-spacer {
   flex: 1 1 auto;
 }
-.mat-typography{
+
+.mat-typography {
   width: auto;
   height: auto;
 }
 
-#st{
+#st {
   height: 5px;
   width: auto;
   border: 10px solid #3F51B5;
   background-color: #3F51B5;
-  color:#3F51B5;
+  color: #3F51B5;
 }
 
-.table{
+.table {
   box-shadow: 2px 2.5px 0px 5px #48529944;
 
 }
 
-.sth1{
+.sth1 {
   text-align: center;
   font-size: 25px;
   position: relative;
   top: 15px;
 }
 
-#ord{
+#ord {
   text-align: right;
 }

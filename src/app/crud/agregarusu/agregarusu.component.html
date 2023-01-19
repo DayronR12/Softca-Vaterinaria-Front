@@ -2,54 +2,58 @@
   <h1 mat-icon="">Veterinaria</h1>
   <span class="example-spacer"></span>
 
-
 </mat-toolbar>
+
 <body class="mat-typographyy" style="background-color: #3F51B5;">
 
-<div class="container">
+  <div class="container">
 
-  <mat-card class="card1">
-    <mat-card-content>Agregando Usuario...
-  <form action="">
+    <mat-card class="card1">
+      <mat-card-content>Agregando Usuario...
+        <form action="">
 
-    <mat-form-field class="example-full-width">
-      <mat-label for="nombre">Nombre</mat-label>
-      <input matInput type="text" id="nombre" name="nombre" autocomplete="off" [(ngModel)]="usuarioNuevo.nombre">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label for="tipo_identi">Tipo Identificacion</mat-label>
-      <input matInput type="text" id="tipo_identi" name="tipo_identi" autocomplete="off" [(ngModel)]="usuarioNuevo.tipo_identi">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label for="identificacion">Identificacion</mat-label>
-      <input matInput type="text" id="identificacion" name="identificacion" autocomplete="off" [(ngModel)]="usuarioNuevo.identificacion">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label for="ciudad">Ciudad</mat-label>
-      <input matInput type="text" id="ciudad" name="ciudad" autocomplete="off" [(ngModel)]="usuarioNuevo.ciudad">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label for="direccion">Direccion</mat-label>
-      <input matInput type="text" id="direccion" name="direccion" autocomplete="off" [(ngModel)]="usuarioNuevo.direccion">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label for="telefono">Telefono</mat-label>
-      <input matInput type="text" id="telefono" name="telefono" autocomplete="off" [(ngModel)]="usuarioNuevo.telefono">
-    </mat-form-field>
-    <br>
+          <mat-form-field class="example-full-width">
+            <mat-label for="nombre">Nombre</mat-label>
+            <input matInput type="text" id="nombre" name="nombre" autocomplete="off" [(ngModel)]="usuarioNuevo.nombre">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label for="tipo_identi">Tipo Identificacion</mat-label>
+            <input matInput type="text" id="tipo_identi" name="tipo_identi" autocomplete="off"
+              [(ngModel)]="usuarioNuevo.tipo_identi">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label for="identificacion">Identificacion</mat-label>
+            <input matInput type="text" id="identificacion" name="identificacion" autocomplete="off"
+              [(ngModel)]="usuarioNuevo.identificacion">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label for="ciudad">Ciudad</mat-label>
+            <input matInput type="text" id="ciudad" name="ciudad" autocomplete="off" [(ngModel)]="usuarioNuevo.ciudad">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label for="direccion">Direccion</mat-label>
+            <input matInput type="text" id="direccion" name="direccion" autocomplete="off"
+              [(ngModel)]="usuarioNuevo.direccion">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label for="telefono">Telefono</mat-label>
+            <input matInput type="text" id="telefono" name="telefono" autocomplete="off"
+              [(ngModel)]="usuarioNuevo.telefono">
+          </mat-form-field>
+          <br>
 
-<button mat-raised-button color="primary" id="btn1" (click)="agregarUsuario()">Guardar Cambios</button>
-<button mat-raised-button color="primary" id="btn2" (click)="back()">Volver</button>
+          <button mat-raised-button color="primary" id="btn1" (click)="agregarUsuario()">Guardar Cambios</button>
+          <button mat-raised-button color="primary" id="btn2" (click)="back()">Volver</button>
 
-  </form>
-    </mat-card-content>
-  </mat-card>
+        </form>
+      </mat-card-content>
+    </mat-card>
 
 
 
-</div>
+  </div>

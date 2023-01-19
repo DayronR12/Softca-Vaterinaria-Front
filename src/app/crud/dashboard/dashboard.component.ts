@@ -5,9 +5,6 @@ import { CrudserviceService, Paciente } from 'src/app/services/crudservice.servi
 import { LoginuserService } from '../../services/loginuser.service';
 import { User } from '../../user';
 
-
-
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -16,51 +13,51 @@ import { User } from '../../user';
 export class DashboardComponent implements OnInit {
 
 
-  user:User = {
+  user: User = {
     usuarioId: '',
     password: ''
   }
 
-  lista:any=[];
-  listau:any=[];
-  constructor(private loginuserservice: LoginuserService,private router:Router,
-     private crudserv: CrudserviceService,
-     private crudservusu: CrudserviceUsuarioService) { }
+  lista: any = [];
+  listau: any = [];
+  constructor(private loginuserservice: LoginuserService, private router: Router,
+    private crudserv: CrudserviceService,
+    private crudservusu: CrudserviceUsuarioService) { }
 
   ngOnInit(): void {
     this.listarPacientes();
     this.listarUsuarios();
   }
 
-  listarPacientes(){
+  listarPacientes() {
     this.crudserv.getPaciente().subscribe(
-      res=> {this.lista=res},
+      res => { this.lista = res },
       err => console.log(err)
     );
   }
 
-  listarUsuarios(){
+  listarUsuarios() {
     this.crudservusu.getUsuario().subscribe(
-      res=> {this.listau=res},
+      res => { this.listau = res },
       err => console.log(err)
     );
   }
 
-  eliminar(id:string){
-this.crudserv.deletePaciente(id).subscribe(
-  res=> {this.ngOnInit()},
-  err => console.log(err)
-);
+  eliminar(id: string) {
+    this.crudserv.deletePaciente(id).subscribe(
+      res => { this.ngOnInit() },
+      err => console.log(err)
+    );
   }
 
-  eliminarU(id:string){
+  eliminarU(id: string) {
     this.crudservusu.deleteUsuario(id).subscribe(
-      res=> {this.ngOnInit()},
+      res => { this.ngOnInit() },
       err => console.log(err)
     );
-      }
+  }
 
-  logout(){
+  logout() {
     localStorage.removeItem('usuario');
     this.router.navigate(["/"]);
     window.localStorage.clear();
