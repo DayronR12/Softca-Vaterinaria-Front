@@ -5,24 +5,40 @@
 
 </mat-toolbar>
 
-<div class="container">
+<body class="mat-typographyy" style="background-color: #3F51B5;">
+  <div class="container">
 
-  <form action="">
+    <mat-card class="card1">
 
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" [(ngModel)]="pacienteActual.nombre">
-    <br>
-    <label for="especie">Especie</label>
-    <input type="text" id="especie" name="especie" [(ngModel)]="pacienteActual.especie">
-    <br>
-    <label for="raza">Raza</label>
-    <input type="text" id="raza" name="raza" [(ngModel)]="pacienteActual.raza">
-    <br>
-    <button mat-raised-button color="primary" (click)="guardar()">Guardar Cambios</button>
+      <mat-card-content>Modificando Paciente...
+        <br>
 
-  </form>
+        <form action="">
+
+          <mat-form-field class="example-full-width">
+            <mat-label for="nombre">Nombre</mat-label>
+            <input matInput type="text" id="nombre" name="nombre" autocomplete="off" [(ngModel)]="pacienteActual.nombre">
+          </mat-form-field>
+
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label for="especie">Especie</mat-label>
+            <input matInput type="text" id="especie" name="especie" autocomplete="off"
+              [(ngModel)]="pacienteActual.especie">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label for="raza">Raza</mat-label>
+            <input matInput type="text" id="raza" name="raza" autocomplete="off" [(ngModel)]="pacienteActual.raza">
+          </mat-form-field>
+          <br>
+          <button mat-raised-button color="primary" id="btn1" (click)="guardar()">Guardar Cambios</button>
+          <button mat-raised-button color="primary" id="btn2" (click)="back()">Volver</button>
+
+        </form>
+      </mat-card-content>
+    </mat-card>
 
 
 
-
-</div>
+  </div>

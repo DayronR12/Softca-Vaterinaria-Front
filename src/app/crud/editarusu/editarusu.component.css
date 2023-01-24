@@ -1,0 +1,15 @@
+.card1 {
+  width: 20%;
+  position: relative;
+  left: 40%;
+
+}
+
+#btn1 {
+  left: 20px;
+}
+
+#btn2 {
+  left: 60px;
+  top: 5px;
+}

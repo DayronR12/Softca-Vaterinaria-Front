@@ -28,4 +28,8 @@ export class EditarComponent implements OnInit {
     );
   }
 
+  back() {
+    this.router.navigate(['/dashboard'])
+  }
+
 }

@@ -20,6 +20,7 @@ import { AgregarComponent } from './crud/agregar/agregar.component';
 import { AgregarusuComponent } from './crud/agregarusu/agregarusu.component';
 import { EditarusuComponent } from './crud/editarusu/editarusu.component';
 import {MatCardModule} from '@angular/material/card';
+import { MatTableExporterModule } from 'mat-table-exporter';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatIconModule,
     MatCardModule,
-
+    MatTableExporterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

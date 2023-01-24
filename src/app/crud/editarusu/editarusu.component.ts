@@ -27,4 +27,8 @@ export class EditarusuComponent implements OnInit {
     );
   }
 
+  back() {
+    this.router.navigate(['/dashboard'])
+  }
+
 }
