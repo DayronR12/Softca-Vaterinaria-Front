@@ -16,7 +16,6 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Id</th>
         <th scope="col">Nombre</th>
         <th scope="col">Especie</th>
         <th scope="col">Raza</th>
@@ -25,7 +24,6 @@
     </thead>
     <tbody>
       <tr *ngFor="let paciente of lista">
-        <td>{{paciente.id}}</td>
         <td>{{paciente.nombre}}</td>
         <td>{{paciente.especie}}</td>
         <td>{{paciente.raza}}</td>
@@ -48,7 +46,6 @@
   <table class="table">
     <thead color="primary">
       <tr>
-        <th scope="col">Id</th>
         <th scope="col">Nombre</th>
         <th scope="col">Tipo Identificacion</th>
         <th scope="col">Identificacion</th>
@@ -60,7 +57,6 @@
     </thead>
     <tbody>
       <tr *ngFor="let user of listau">
-        <td>{{user.id}}</td>
         <td>{{user.nombre}}</td>
         <td>{{user.tipo_identi}}</td>
         <td>{{user.identificacion}}</td>
